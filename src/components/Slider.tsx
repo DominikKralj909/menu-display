@@ -5,7 +5,7 @@ import { SliderImage } from '../apis/types';
 const Slider = () => {
     const [sliderImages, setSliderImages] = useState<Array<SliderImage>>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-	
+
     const fetchSliderImages = async () => {
         try {
             const response = await api.getSliderImages();
@@ -31,13 +31,19 @@ const Slider = () => {
 
     return (
         <div className="slider">
-            {sliderImages.length > 0 && (
-                <img
-                    src={`/img/${sliderImages[currentIndex].src}`}
-                    alt={`Slide ${currentIndex + 1}`}
-                    className="slider-image"
-                />
-            )}
+            <div
+                className="slider-images-container"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+                {sliderImages.map((image: SliderImage, index: number) => (
+                    <img
+                        key={image.id}
+                        src={`/img/${image.src}`}
+                        alt={`Slide ${index + 1}`}
+                        className="slider-image"
+                    />
+                ))}
+            </div>
         </div>
     );
 };
