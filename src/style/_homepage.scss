@@ -1,0 +1,23 @@
+.homepage-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.homepage-footer {
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-direction: column;
+    background-color: #000;
+	margin-top: -1px;
+}
+
+.homepage-footer-intro-text {
+    font-size: 3.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+}

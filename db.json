@@ -1,0 +1,9 @@
+{
+    "sliderImages": [
+      { "id": 1, "src": "indexSlider1.png" },
+      { "id": 2, "src": "indexSlider2.png" },
+      { "id": 3, "src": "indexSlider3.png" }
+    ],
+    "footerLogo": { "id": 1, "src": "logoSoftLab.png" }
+  }
+  

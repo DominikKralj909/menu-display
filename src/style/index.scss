@@ -1,1 +1,5 @@
-@import './reset';
+@use './reset';
+
+@use './slider';
+@use './main-layout';
+@use './homepage';
